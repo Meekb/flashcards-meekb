@@ -5,6 +5,7 @@ const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 
 describe('Deck', function() {
+  let card1, card2, card3, deck, newDeck;
 
 it('should be a function', function() {
   const newDeck = new Deck();
@@ -25,7 +26,7 @@ it('should know how many cards are in the deck', function() {
   const card2 = new Card(2, 'What prototype method returns an array of the same length with modification?', ['sort', 'map', 'reduce'], 'map');
   const card3 = new Card(3, 'How many arguments does the reduce method take?', ['1', '2', '3'], '2');
   const newDeck = new Deck([card1, card2, card3]);
-  const cardCount = newDeck.countCardsInDeck();
+  const cardCount = newDeck.countCards();
   expect(cardCount).to.equal(3);
 });
 

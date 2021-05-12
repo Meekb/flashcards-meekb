@@ -53,13 +53,13 @@ describe('Turn', function() {
   it('should return Correct! if the users answer matches', function() {
     const turn = new Turn('object', card);
     const feedback = turn.giveFeedback();
-    expect(feedback).to.be.equal('Correct!');
+    expect(feedback).to.equal('Correct!');
   });
 
   it('should return Incorrect! if the users answer does not match the correct answer', function() {
     const turn = new Turn('potato', card);
     const feedback = turn.giveFeedback();
-    expect(feedback).to.be.equal('Incorrect!');
+    expect(feedback).to.equal('Incorrect!');
   });
 
 
