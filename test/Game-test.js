@@ -17,10 +17,6 @@ describe('Game', function() {
     newGame = new Game();
   });
 
-it('should be a function', function() {
-  expect(Game).to.be.a('function');
-});
-
 it('should be an instance of Game', function() {
   expect(newGame).to.be.an.instanceof(Game);
 });
