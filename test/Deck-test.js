@@ -1,7 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const Turn = require('../src/Turn');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
 
@@ -17,8 +16,8 @@ it('should be store a whole deck of cards', function() {
   const card2 = new Card(2, 'What prototype method returns an array of the same length with modification?', ['sort', 'map', 'reduce'], 'map');
   const card3 = new Card(3, 'How many arguments does the reduce method take?', ['1', '2', '3'], '2');
   const deck = [card1, card2, card3];
-  const newDeck = new Deck(deck);
-  expect(newDeck.deck).to.eql(deck);
+  const newDeck = new Deck(cards = []);
+  expect(newDeck.cards).to.eql(cards);
 });
 
 it('should know how many cards are in the deck', function() {

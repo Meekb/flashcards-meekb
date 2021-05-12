@@ -20,7 +20,7 @@ describe('Turn', function() {
   it('should be instantiated a second argument, which is the current card in play', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('object', card);
-    expect(turn.cardInPlay).to.eql(card);
+    expect(turn.card).to.eql(card);
   });
 
   it('should return the users guess', function() {
@@ -46,7 +46,7 @@ describe('Turn', function() {
 
   it('should return false if the users guess matches the correct answer', function () {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    const turn = new Turn('potato', card);
+    const turn = new Turn('potatoes', card);
     const evaluation = turn.evaluateGuess();
     expect(evaluation).to.be.false;
   });
@@ -62,7 +62,7 @@ describe('Turn', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     const turn = new Turn('potato', card);
     const feedback = turn.giveFeedback();
-    expect(feedback).to.be.equal('Correct!');
+    expect(feedback).to.be.equal('Incorrect!');
   });
 
 
