@@ -70,7 +70,7 @@ describe('Round', function() {
     expect(newRound.calculatePercentCorrect()).to.equal(67);
   });
 
-  it('Should print to the console "** Round over! ** You answered <>% of the questions correctly!"', function() {
+  it('should end a round by printing to the console "** Round over! ** You answered <>% of the questions correctly!"', function() {
     newRound.takeTurn('array');
     newRound.takeTurn('map');
     newRound.takeTurn('potatoes');
