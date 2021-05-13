@@ -11,9 +11,9 @@ describe('Turn', function() {
     card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
   });
 
-  it('should be a function', function() {
-    const turn = new Turn();
-    expect(Turn).to.be.a('function');
+  it('should be a an object', function() {
+    const turn = new Turn('object', card);
+    expect(turn).to.be.an('object');
   });
 
   it('should be instantiated with the usersGuess as the first parameter, and it should be a string', function() {

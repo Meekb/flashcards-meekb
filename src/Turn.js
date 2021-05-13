@@ -14,15 +14,7 @@ class Turn {
   }
 
   evaluateGuess() {
-    return this.guess === this.card.correctAnswer ? true : false;
-  }
-
-  returnCard(card) {
-    return this.currentCard;
-  }
-
-  evaluateGuess() {
-    if (this.guess === this.currentCard['correctAnswer']) {
+    if (this.guess === this.currentCard.correctAnswer) {
       return true;
     } else {
       return false;
