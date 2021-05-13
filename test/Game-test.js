@@ -21,27 +21,27 @@ describe('Game', function() {
     newGame = new Game();
   });
 
-it('should be an instance of Game', function() {
-  expect(newGame).to.be.an.instanceof(Game);
-});
+  it('should be an instance of Game', function() {
+    expect(newGame).to.be.an.instanceof(Game);
+  });
 
-it('should have a deck property which will be an empty array', function() {
-  expect(newGame.deck).to.be.an('array');
-});
+  it('should have a deck property which will be an  empty array', function() {
+    expect(newGame.deck).to.be.an('array');
+  });
 
-it('should keep track of the current Round', function() {
-  expect(newGame.currentRound).to.be.an('object');
-});
+  it('should keep track of the current Round', function() {
+    expect(newGame.currentRound).to.be.an('object');
+  });
 
-it.skip('should start up the Game', function() {
-  newGame.start(newDeck);
-  expect(newGame.currentRound['deck'].length).to.equal(30);
-});
+  it('should start up the Game', function() {
+    newGame.start(newDeck);
+    expect(newGame.currentRound['deck'].length).to.equal(30);
+  });
 
-it.skip('should print a welcome message at the start of the Game', function() {
-  newGame.start(newDeck);
-  expect(newGame.printMessage).to.be.string;
-});
+  it.skip('should print a welcome message at the start of the Game', function() {
+    newGame.start(newDeck);
+    expect(newGame.printMessage).to.be.string;
+  });
 
 
 });

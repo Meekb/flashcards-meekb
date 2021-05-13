@@ -13,13 +13,18 @@ class Game {
   }
 
   start() {
-    this.gameCards = prototypeQuestions.map(({id, question, answers, correctAns}) => {
-      return new Card(id, question, answers, correctAnswer);
+    this.gameCards =
+      prototypeQuestions.map(card => {
+      return new Card(card.id, card.question, card.answers, card.correctAnswer);
     });
+    console.log(this.gameCards);
     this.deck = new Deck(this.gameCards);
     this.currentRound = new Round(this.deck);
     this.printMessage(this.deck, this.currentRound);
     this.printQuestion(this.currentRound);
+    if (!this.deck.length) {
+      gameEnd();
+    }
   }
 
   printMessage(deck, round) {
@@ -29,6 +34,10 @@ class Game {
 
   printQuestion(round) {
       util.main(round);
+  }
+
+  gameEnd() {
+    return `GAME OVER, MAN! -- GAME OVER!`;
   }
 
 }
