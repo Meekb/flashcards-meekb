@@ -15,29 +15,21 @@ class Game {
   start() {
     this.gameCards =
       prototypeQuestions.map(card => {
-      return new Card(card.id, card.question, card.answers, card.correctAnswer);
-    });
-    console.log(this.gameCards);
+        return new Card(card.id, card.question, card.answers, card.correctAnswer);
+      });
     this.deck = new Deck(this.gameCards);
     this.currentRound = new Round(this.deck);
     this.printMessage(this.deck, this.currentRound);
     this.printQuestion(this.currentRound);
-    if (!this.deck.length) {
-      gameEnd();
-    }
   }
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
------------------------------------------------------------------------`)
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+-----------------------------------------------------------------------`);
   }
 
   printQuestion(round) {
-      util.main(round);
-  }
-
-  gameEnd() {
-    return `GAME OVER, MAN! -- GAME OVER!`;
+    util.main(round);
   }
 
 }
