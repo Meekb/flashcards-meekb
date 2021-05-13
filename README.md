@@ -23,7 +23,7 @@ A [Front-End Project] by: [Beth Meeker](https://github.com/Meekb)
    
   * Architecture 
     * Five class files - Card, Deck, Turn, Round, and Game
-    * Five robust test files accompany each class file - Card-test (provided at project start), Deck-test, Round-test, and Game-test
+    * Five robust test files accompany each class file - Card-test (provided at project start), Deck-test, Turn-test, Round-test, and Game-test
 
   * Game Play 
     * Launch Flashcards from your terminal (CLI - command line interface) - [Instructions](#instructions) for cloning
